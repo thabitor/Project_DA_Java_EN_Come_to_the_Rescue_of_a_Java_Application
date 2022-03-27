@@ -16,9 +16,9 @@ public class AnalyticsCounter {
 		BufferedReader reader = new BufferedReader(new FileReader("symptoms.txt"));
 		List<String> originalSymptomsFile = new ArrayList<String>();
 
-		String eachSingleLineOfOriginalSymptomsFile;
-		while ((eachSingleLineOfOriginalSymptomsFile = reader.readLine()) != null) {
-			originalSymptomsFile.add(eachSingleLineOfOriginalSymptomsFile);
+		String singleLine;	// this temporary variable refers to each line of the original text file
+		while ((singleLine = reader.readLine()) != null) {
+			originalSymptomsFile.add(singleLine);
 			originalSymptomsFile.sort(String::compareToIgnoreCase);
 		}
 
@@ -26,20 +26,22 @@ public class AnalyticsCounter {
 		System.out.println(originalSymptomsFile);
 		System.out.println("This array has " + originalSymptomsFile.size() + " values");
 
-		ArrayList<String> uniques = new ArrayList<String>();
+		ArrayList<String> uniqueSymptoms = new ArrayList<String>();
 
 		for (String element : originalSymptomsFile) {
-			if (!uniques.contains(element)) {
-				uniques.add(element);
+			//'element' refers to each element of the uniqueSymptoms array; this statement says 'for each element in uniqueSymptoms reiterate through the originalSymptomsFile array and check the following condition/action
+			if (!uniqueSymptoms.contains(element)) {
+				uniqueSymptoms.add(element);
 			}
 		}
 
-		System.out.println("The unique symptoms from the original symptoms file are:\n" + uniques + "\nThat's " + uniques.size() + " symptoms with the following frequencies: ");
+		System.out.println("The unique symptoms from the original symptoms file are:\n" + uniqueSymptoms + "\nThat's " + uniqueSymptoms.size() + " symptoms with the following frequencies: ");
 
-		Set<String> newSet = new HashSet<String>(originalSymptomsFile);
+		Set<String> newSet = new HashSet<String>(originalSymptomsFile); // this HashSet variable takes its keys from the originalSymptomsFile array
 
-		for (String s : newSet) {
-			System.out.println(s + ": " + Collections.frequency(originalSymptomsFile, s));
+		for (String symptomElement : newSet) {
+			// for each element in originalSymptomsFile reiterate through the new HashSet variable (newSet) and check the following condition/action
+			System.out.println(symptomElement + ": " + Collections.frequency(originalSymptomsFile, symptomElement));
 		}
 	}
 }
