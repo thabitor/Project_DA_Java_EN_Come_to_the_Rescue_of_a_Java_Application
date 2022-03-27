@@ -25,6 +25,17 @@ public class AnalyticsCounter {
 
 		reader.close();
 		System.out.println(symptoms);
+		System.out.println("This array has " + symptoms.size() + " values");
+
+		ArrayList<String> uniques = new ArrayList<String>();
+
+		for (String element : symptoms) {
+			if (!uniques.contains(element)) {
+				uniques.add(element);
+			}
+		}
+
+		System.out.println("The unique values are: \n" + uniques + "\nand that's " + uniques.size() + " symptoms");
 	}
 }
 
