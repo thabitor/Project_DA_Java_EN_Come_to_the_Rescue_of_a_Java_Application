@@ -4,9 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class AnalyticsCounter {
 //	private static int headCount = 0;    // initialize to 0
@@ -16,29 +14,41 @@ public class AnalyticsCounter {
 	public static void main(String args[]) throws Exception {
 
 		BufferedReader reader = new BufferedReader(new FileReader("symptoms.txt"));
-		List<String> symptoms = new ArrayList<String>();
+		List<String> originalSymptomsFile = new ArrayList<String>();
 
-		String line;
-		while ((line = reader.readLine()) != null) {
-			symptoms.add(line);
+		String eachSingleLineOfOriginalSymptomsFile;
+		while ((eachSingleLineOfOriginalSymptomsFile = reader.readLine()) != null) {
+			originalSymptomsFile.add(eachSingleLineOfOriginalSymptomsFile);
+			originalSymptomsFile.sort(String::compareToIgnoreCase);
 		}
 
 		reader.close();
-		System.out.println(symptoms);
-		System.out.println("This array has " + symptoms.size() + " values");
+		System.out.println(originalSymptomsFile);
+		System.out.println("This array has " + originalSymptomsFile.size() + " values");
 
 		ArrayList<String> uniques = new ArrayList<String>();
 
-		for (String element : symptoms) {
+		for (String element : originalSymptomsFile) {
 			if (!uniques.contains(element)) {
 				uniques.add(element);
 			}
 		}
 
-		System.out.println("The unique values are: \n" + uniques + "\nand that's " + uniques.size() + " symptoms");
+		System.out.println("The unique symptoms from the original symptoms file are:\n" + uniques + "\nThat's " + uniques.size() + " symptoms with the following frequencies: ");
+
+		Set<String> newSet = new HashSet<String>(originalSymptomsFile);
+
+		for (String s : newSet) {
+			System.out.println(s + ": " + Collections.frequency(originalSymptomsFile, s));
+		}
 	}
 }
 
+//		for (HashSet sym : newSet) {
+//			if(!newSet.contains(sym)) {
+//				Set<String, int> sortedSet = new HashSet<String, int>();
+//			}
+//		}
 //		FileInputStream stream = new FileInputStream("symptoms.txt");
 //		Scanner scanner = new Scanner(stream);
 //		String line = ;
