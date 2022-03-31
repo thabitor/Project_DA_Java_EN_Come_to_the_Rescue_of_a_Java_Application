@@ -11,6 +11,7 @@ public class AnalyticsCounter {
 	public static void main(String args[]) throws IOException {
 
 		BufferedReader reader = new BufferedReader(new FileReader("symptoms.txt"));
+	//	FileWriter writer = new FileWriter ("result.out");
 
 		List<String> originalSymptomsFile = new ArrayList<String>();
 
@@ -24,21 +25,20 @@ public class AnalyticsCounter {
 
 		ArrayList<String> uniqueSymptoms = new ArrayList<String>();
 
-		for (String symptom : originalSymptomsFile) {
+	/*	for (String symptom : originalSymptomsFile) {
 			//'element' refers to each element of the uniqueSymptoms array; this statement says 'for each element in uniqueSymptoms reiterate through the originalSymptomsFile array and check the following condition/action
 			if (!uniqueSymptoms.contains(symptom)) {
 				uniqueSymptoms.add(symptom);
 			}
-		}
-
+		}*/
 		// these 4 lines below convert our original and unique ListArrays into Arrays
 
 			String[] arrOriginalSymptomsFile = new String[originalSymptomsFile.size()];
-			String[] arrUniqueSymptoms = new String[uniqueSymptoms.size()];
+		//	String[] arrUniqueSymptoms = new String[uniqueSymptoms.size()];
 			originalSymptomsFile.toArray(arrOriginalSymptomsFile);
-			uniqueSymptoms.toArray(arrUniqueSymptoms);
+		//	uniqueSymptoms.toArray(arrUniqueSymptoms);
 
-			System.out.println(Arrays.toString(arrOriginalSymptomsFile) + "\n" + Arrays.toString(arrUniqueSymptoms));
+			System.out.println(Arrays.toString(arrOriginalSymptomsFile));
 
 		int[] visitedArrOriginalSymptomsFile = new int [arrOriginalSymptomsFile.length];
 		int visited = -1;
@@ -59,6 +59,13 @@ public class AnalyticsCounter {
 			if (visitedArrOriginalSymptomsFile[i] != visited) {
 				System.out.println("Frequency of " + arrOriginalSymptomsFile[i] + " : " + visitedArrOriginalSymptomsFile[i]);
 			}
+	//		writer.write(arrOriginalSymptomsFile[i] + " : " + visitedArrOriginalSymptomsFile[i]);
+	//		writer.close();
+
+
+
+			// next generate output
+
 		}
 	}
 }
