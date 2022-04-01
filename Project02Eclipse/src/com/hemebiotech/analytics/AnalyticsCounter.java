@@ -41,10 +41,3 @@ public class AnalyticsCounter {
 		writer.close();
 	}
 }
-
-// next generate output
-	/*	FileWriter writer = new FileWriter ("result.out");
-		writer.write("headache: " + headacheCount + "\n");
-		writer.write("rash: " + rashCount + "\n");
-		writer.write("dialated pupils: " + pupilCount + "\n");
-		writer.close();*/
