@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c94fd8c4-1565-445b-a881-9a7d890de413" name="Changes" comment="" />
+    <list default="true" id="b11a25d3-4265-4092-a453-db00894783cb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project02Eclipse.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hemebiotech/analytics/AnalyticsCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hemebiotech/analytics/AnalyticsCounter.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,7 +20,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="26nIe2LsY5JHkZu6OBYqr119QBS" />
+  <component name="ProjectId" id="27CN2wXblr5lBA8Ai3CxcrYCONZ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -22,18 +29,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="project.structure.last.edited" value="SDKs" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
   <component name="RunManager">
     <configuration name="AnalyticsCounter" type="Application" factoryName="Application">
-      <option name="ALTERNATIVE_JRE_PATH" value="/usr/lib/jvm/default-java" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.hemebiotech.analytics.AnalyticsCounter" />
-      <module name="analytics" />
+      <module name="Project02Eclipse" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -42,12 +43,23 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c94fd8c4-1565-445b-a881-9a7d890de413" name="Changes" comment="" />
-      <created>1648053020834</created>
+      <changelist id="b11a25d3-4265-4092-a453-db00894783cb" name="Changes" comment="" />
+      <created>1648819911550</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1648053020834</updated>
+      <updated>1648819911550</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
