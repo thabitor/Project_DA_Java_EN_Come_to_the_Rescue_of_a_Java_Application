@@ -1,0 +1,19 @@
+package com.hemebiotech.analytics;
+import java.io.*;
+import java.util.*;
+public class AnalyticsCounter { public static void main(String args[]) throws IOException {
+		String pathOfSymptomsDotTxt = "/home/thabit/Documents/Project_DA_Java_EN_Come_to_the_Rescue_of_a_Java_Application/Project02Eclipse/symptoms.txt";
+		BufferedReader reader = new BufferedReader(new FileReader(pathOfSymptomsDotTxt));
+		ArrayList<String> symptomsDotTxt = new ArrayList<String>();
+		String eachLine = new String();
+    while ((eachLine = reader.readLine()) != null) {symptomsDotTxt.add(eachLine);	Collections.sort(symptomsDotTxt);}
+  	String[] symptomsDotTxtToArray = new String[symptomsDotTxt.size()];
+		symptomsDotTxt.toArray(symptomsDotTxtToArray);
+		System.out.println(Arrays.toString(symptomsDotTxtToArray));
+		reader.close();
+    int i = 0;
+    while (i < symptomsDotTxtToArray.length) { int symptoms = i;
+    while (i < symptomsDotTxtToArray.length && symptomsDotTxtToArray[i].equals(symptomsDotTxtToArray[symptoms])) { ++i; }
+    int count = i - symptoms;
+	  System.out.println(symptomsDotTxtToArray[symptoms] + " : " + count); }
+} }
