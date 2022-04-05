@@ -20,7 +20,7 @@ public class AnalyticsCounter {
 		System.out.println(Arrays.toString(symptomsDotTxtToArray));
 	 
 //3rd: Introduce BufferedWriter class for later file output using the append option
-    BufferedWriter writer = new BufferedWriter (new FileWriter("/home/thabit/Documents/Project_DA_Java_EN_Come_to_the_Rescue_of_a_Java_Application/Project02Eclipse/result.txt", true));    
+    BufferedWriter writer = new BufferedWriter (new FileWriter("/home/thabit/Documents/Project_DA_Java_EN_Come_to_the_Rescue_of_a_Java_Application/Project02Eclipse/results.out", true));    
     
     
 //4th: Introduce nested while loop to reiterate through the elements of the Array and count occurences of each
@@ -31,7 +31,7 @@ public class AnalyticsCounter {
    //count = length position - index position
      			int count = lengthOfEachElement - indexElement; 
       		 
-//5th: Writing output of the program and to the output.txt
+//5th: Writing output of the program and to the results.out
           System.out.println(symptomsDotTxtToArray[indexElement] + " : " + count);
           String symptomFrequency = symptomsDotTxtToArray[indexElement].toString() + " : " + Integer.toString(count);
 			    symptomFrequency = symptomFrequency.substring(0,1).toUpperCase() + symptomFrequency.substring(1).toLowerCase();
