@@ -36,6 +36,8 @@ public class AnalyticsCounter {
           String symptomFrequency = symptomsDotTxtToArray[indexElement].toString() + " : " + Integer.toString(count);
 			    symptomFrequency = symptomFrequency.substring(0,1).toUpperCase() + symptomFrequency.substring(1).toLowerCase();
 			    writer.write(symptomFrequency + "\n");
-		} writer.close();
+		} 
+   writer.write("\n" + "+++End of Output+++" + "\n\n");
+   writer.close();
   }
 }
