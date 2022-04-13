@@ -11,7 +11,7 @@ public class SymptomsCounter {
 
   public static void symptomCounterWriter(ArrayList<String> symptomsArray) throws IOException {
       
-      symptomsArray = symptomsArray;
+     symptomsArray = symptomsArray;
       BufferedWriter writer = new BufferedWriter (new FileWriter("analytics/results.out", true));
 
     //Counter
