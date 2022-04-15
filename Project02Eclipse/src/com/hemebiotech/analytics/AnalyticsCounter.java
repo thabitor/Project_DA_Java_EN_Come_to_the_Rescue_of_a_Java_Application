@@ -5,6 +5,10 @@ import java.util.*;
 
 public class AnalyticsCounter {
 
+    /* This class and its main method act is the controler of all the methods in this application
+    *
+    */
+
     List<String> symptomsArray;
     TreeMap <String, Integer> symptomsTreeMap;
 

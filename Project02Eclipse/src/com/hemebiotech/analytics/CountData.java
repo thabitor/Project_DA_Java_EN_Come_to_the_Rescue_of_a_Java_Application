@@ -6,8 +6,8 @@ public class CountData implements ISymptomCounter {
 
 	private List<String> symptomsFromFile;
 	/**
-	 * 
-	 
+	 * Method reading file
+     * @return the TreeMap Hash Set of each symptom extracted from the Arraylist of the reader method
 	 */
 
 	public CountData (List<String> symptomsFromFile) {

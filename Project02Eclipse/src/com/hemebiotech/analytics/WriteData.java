@@ -3,10 +3,7 @@ package analytics;
 import java.io.*;
 import java.util.*;
 
-/**
- * Simple brute force implementation
- *
- */
+
 public class WriteData implements ISymptomWriter {
 
 	private TreeMap<String, Integer> counterResult;
@@ -18,7 +15,8 @@ public class WriteData implements ISymptomWriter {
 
 	/**
 	 * 
-	 * comments to be added
+	 * Writing TreeMap data to output file
+	 * @return this method does not return a value
 	 */
 @Override
 	public void WriteSymptoms() throws IOException {
