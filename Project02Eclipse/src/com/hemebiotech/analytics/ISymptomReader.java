@@ -1,4 +1,4 @@
-package com.hemebiotech.analytics;
+package analytics;
 
 import java.util.List;
 
