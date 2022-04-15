@@ -7,7 +7,7 @@ import java.util.*;
  * Simple brute force implementation
  *
  */
-public class ReadSymptomDataFromFile implements ISymptomReader {
+public class ReadData implements ISymptomReader {
 
 	private String filepath;
 	
@@ -15,12 +15,12 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 	 * 
 	 * @param filepath a full or partial path to file with symptom strings in it, one per line
 	 */
-	public ReadSymptomDataFromFile (String filepath) {
+	public ReadData (String filepath) {
 		this.filepath = filepath;
 	}
 	
 	@Override
-	public List<String> GetSymptoms() {
+	public List<String> ReadSymptoms() {
 		ArrayList<String> result = new ArrayList<String>();
 		
 		if (filepath != null) {
